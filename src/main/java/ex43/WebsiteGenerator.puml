@@ -1,0 +1,27 @@
+@startuml
+
+
+'All the input happens in main as well as the output'
+class App
+{
+    +void main()
+}
+
+'The creation of folders happens here with the info from main'
+class PromptWebGen
+{
+    'Attributes'
+    +String siteName
+    +String siteAuthor
+    +String sitePath
+
+    'Functions'
+    +String createWebsite()
+    +String createHTML()
+    +String createJSFolder()
+    +String createCSSFolder()
+}
+
+App o--> PromptWebGen
+
+@enduml
